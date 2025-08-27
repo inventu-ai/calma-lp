@@ -3374,6 +3374,7 @@ blockquote {
     text-decoration: none;
 }
 
+
 .button-text:hover:where(.w-variant-1aa9753b-0a58-a591-b066-af77827f05bc),
 .button-text.dark-3:hover {
     color: var(--colors--white);
