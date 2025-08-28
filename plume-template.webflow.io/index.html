@@ -81,6 +81,94 @@
             border: none;
             background: none;
         }
+
+        /* Correções para a seção de benefícios */
+        .grid.benefits {
+            align-items: center !important;
+            justify-content: flex-start !important;
+            text-align: left !important;
+        }
+        .benefits-wrap {
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 40px !important; /* Espaçamento vertical maior entre tópicos */
+            width: 100% !important;
+            text-align: left !important;
+        }
+        .benefits-wrap > .benefit-wrap:first-child {
+            margin-top: 80px !important;
+        }
+        .benefit-wrap {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            gap: 20px !important;
+            margin-bottom: 0 !important;
+            width: 100%;
+        }
+        .benefit-icon-wrap {
+            margin-top: 0 !important;
+            margin-right: 16px !important;
+            flex-shrink: 0;
+        }
+        .benefit-text-wrap {
+            text-align: left !important;
+            width: 100% !important;
+        }
+        /* Remove alteração de flex-direction em mobile */
+        @media (max-width: 991px) {
+            .benefit-wrap {
+                flex-direction: row !important;
+                align-items: flex-start !important;
+            }
+            .benefits-image-wrap {
+                align-items: center !important;
+            }
+        }
+        .beneficios-flex {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 24px !important;
+            width: 100%;
+        }
+        .benefits-image-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-self: flex-end !important;
+            height: 100%;
+            max-width: 700px !important;
+            flex: 1 1 60%;
+        }
+        .benefits-image {
+            margin: 0 auto !important;
+            display: block !important;
+            max-width: 900px !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        .beneficios-textos {
+            flex: 1 1 40%;
+        }
+        .beneficios-flex {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 24px !important;
+            width: 100%;
+        }
+        @media (max-width: 991px) {
+            .benefit-wrap {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            .benefits-image-wrap {
+                align-items: center !important;
+            }
+        }
     </style>
 </head>
 
@@ -398,74 +486,76 @@
     <div class="spacer _32"></div>
     <div id="beneficios" class="section">
         <div class="container">
-            <h1 data-w-id="9dfa85f9-3c81-4705-1c09-b13207fda3e8"
-                style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                class="heading h2">Por que <span class="highlight">escolher</span> o C'Alma?</h1>
-            <div class="text-box m">
-                <div class="overlay-hidden">
-                    <p data-w-id="a9e0ba6f-1b29-019b-d6d5-b205ca7913fd"
-                        style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                        class="paragraph large">Veja abaixo os benefícios de utilizar nossa plataforma e ter o suporte de especialistas qualificados.</p>
-                </div>
-            </div>
-            <div class="w-layout-grid grid benefits">
-                <div class="benefits-wrap">
-                    <div class="benefit-wrap">
+            <div class="beneficios-flex" style="display: flex; align-items: center; justify-content: space-between; gap: 48px;">
+                <div class="beneficios-textos">
+                    <h1 data-w-id="9dfa85f9-3c81-4705-1c09-b13207fda3e8"
+                        style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                        class="heading h2">Por que <span class="highlight">escolher</span> o C'Alma?</h1>
+                    <div class="text-box m">
                         <div class="overlay-hidden">
-                            <div data-w-id="b00704b4-fa3f-8ad4-84ef-9d7dff1f3092"
+                            <p data-w-id="a9e0ba6f-1b29-019b-d6d5-b205ca7913fd"
                                 style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="benefit-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798b90ed1d35ecb4ddeb06e_guidance-2.svg"
-                                    loading="lazy" alt="icon
-" class="benefit-icon" /></div>
-                        </div>
-                        <div class="benefit-text-wrap">
-                            <h1 data-w-id="b1541c69-bcde-5589-ffe9-79f84325a6b1"
-                                style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                class="heading h5 no-top-margin">Orientação Profissional</h1>
-                            <div class="text-box s">
-                                <p data-w-id="abb820d6-1872-9f0b-450b-0be73e6a1dd8"
-                                    style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                    class="paragraph">Conte com psicólogos e especialistas que podem orientar sua equipe, criar planos de bem-estar personalizados e ajudar a manter a motivação.</p>
-                            </div>
+                                class="paragraph large">Veja abaixo os benefícios de utilizar nossa plataforma e ter o suporte de especialistas qualificados.</p>
                         </div>
                     </div>
-                    <div class="benefit-wrap">
-                        <div class="overlay-hidden">
-                            <div data-w-id="08f4ce75-7022-e636-02c1-0374542acfa4"
-                                style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="benefit-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798b9947da7f37163e60c41_access-1.svg"
-                                    loading="lazy" alt="icon" class="benefit-icon" /></div>
-                        </div>
-                        <div class="benefit-text-wrap">
-                            <h1 data-w-id="294b6cb8-8f8a-9c14-4494-86d55649010f"
-                                style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                class="heading h5 no-top-margin">Acesso 24/7</h1>
-                            <div class="text-box s">
-                                <p data-w-id="294b6cb8-8f8a-9c14-4494-86d556490112"
+                    <div class="benefits-wrap">
+                        <div class="benefit-wrap">
+                            <div class="overlay-hidden">
+                                <div data-w-id="b00704b4-fa3f-8ad4-84ef-9d7dff1f3092"
+                                    style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="benefit-icon-wrap"><img
+                                        src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798b90ed1d35ecb4ddeb06e_guidance-2.svg"
+                                        loading="lazy" alt="icon
+" class="benefit-icon" /></div>
+                            </div>
+                            <div class="benefit-text-wrap">
+                                <h1 data-w-id="b1541c69-bcde-5589-ffe9-79f84325a6b1"
                                     style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                    class="paragraph">Nossa plataforma digital oferece acesso contínuo a ferramentas de bem-estar, sessões de terapia e conteúdos exclusivos, a qualquer hora e em qualquer lugar.</p>
+                                    class="heading h5 no-top-margin">Orientação Profissional</h1>
+                                <div class="text-box s">
+                                    <p data-w-id="abb820d6-1872-9f0b-450b-0be73e6a1dd8"
+                                        style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                        class="paragraph">Conte com psicólogos e especialistas que podem orientar sua equipe, criar planos de bem-estar personalizados e ajudar a manter a motivação.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="benefit-wrap">
-                        <div class="overlay-hidden">
-                            <div data-w-id="8d412f7e-2eca-6a7e-5d21-c5badaf95cde"
-                                style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="benefit-icon-wrap"><img
-                                    src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798bc8fa80a933d8fa3fd73_equipment-1.svg"
-                                    loading="lazy" alt="icon
-" class="benefit-icon" /></div>
-                        </div>
-                        <div class="benefit-text-wrap">
-                            <h1 data-w-id="f65e6b52-9707-0c59-69a3-1cdbe367abdc"
-                                style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                class="heading h5 no-top-margin">Ferramentas Premium</h1>
-                            <div class="text-box s">
-                                <p data-w-id="f65e6b52-9707-0c59-69a3-1cdbe367abdf"
+                        <div class="benefit-wrap">
+                            <div class="overlay-hidden">
+                                <div data-w-id="08f4ce75-7022-e636-02c1-0374542acfa4"
+                                    style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="benefit-icon-wrap"><img
+                                        src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798b9947da7f37163e60c41_access-1.svg"
+                                        loading="lazy" alt="icon" class="benefit-icon" /></div>
+                            </div>
+                            <div class="benefit-text-wrap">
+                                <h1 data-w-id="294b6cb8-8f8a-9c14-4494-86d55649010f"
                                     style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                    class="paragraph">Oferecemos uma vasta gama de recursos, incluindo IA conversacional, analytics avançados, e muito mais.</p>
+                                    class="heading h5 no-top-margin">Acesso 24/7</h1>
+                                <div class="text-box s">
+                                    <p data-w-id="294b6cb8-8f8a-9c14-4494-86d556490112"
+                                        style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                        class="paragraph">Nossa plataforma digital oferece acesso contínuo a ferramentas de bem-estar, sessões de terapia e conteúdos exclusivos, a qualquer hora e em qualquer lugar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="benefit-wrap">
+                            <div class="overlay-hidden">
+                                <div data-w-id="8d412f7e-2eca-6a7e-5d21-c5badaf95cde"
+                                    style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="benefit-icon-wrap"><img
+                                        src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798bc8fa80a933d8fa3fd73_equipment-1.svg"
+                                        loading="lazy" alt="icon
+" class="benefit-icon" /></div>
+                            </div>
+                            <div class="benefit-text-wrap">
+                                <h1 data-w-id="f65e6b52-9707-0c59-69a3-1cdbe367abdc"
+                                    style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                    class="heading h5 no-top-margin">Ferramentas Premium</h1>
+                                <div class="text-box s">
+                                    <p data-w-id="f65e6b52-9707-0c59-69a3-1cdbe367abdf"
+                                        style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+                                        class="paragraph">Oferecemos uma vasta gama de recursos, incluindo IA conversacional, analytics avançados, e muito mais.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
