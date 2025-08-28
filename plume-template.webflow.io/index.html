@@ -13,14 +13,12 @@
     <meta
         content="Transforme o ambiente de trabalho da sua empresa com a C'Alma. Oferecemos uma solução completa de saúde mental corporativa com IA, analytics e compliance."
         property="og:description" />
-    <meta content="URL_DA_IMAGEM_DA_MARCA_CALMA"
-        property="og:image" />
+    <meta content="URL_DA_IMAGEM_DA_MARCA_CALMA" property="og:image" />
     <meta content="C'Alma - Saúde Mental Corporativa e Bem-Estar no Trabalho" property="twitter:title" />
     <meta
         content="Transforme o ambiente de trabalho da sua empresa com a C'Alma. Oferecemos uma solução completa de saúde mental corporativa com IA, analytics e compliance."
         property="twitter:description" />
-    <meta content="URL_DA_IMAGEM_DA_MARCA_CALMA"
-        property="twitter:image" />
+    <meta content="URL_DA_IMAGEM_DA_MARCA_CALMA" property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -51,6 +49,52 @@
         .w-webflow-badge {
             display: none !important;
         }
+
+        /* Estilos para a seção do blog - Em Breve */
+        .blog-card-disabled {
+            position: relative;
+            cursor: default !important;
+        }
+
+        .blog-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #35447d 30%, rgba(30, 30, 30, 0) 80%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .blog-card-disabled:hover .blog-card-overlay {
+            opacity: 1;
+        }
+
+        .overlay-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: rgb(240, 240, 240);
+        }
+
+        .overlay-subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            max-width: 80%;
+            margin: 0 auto;
+            color: #e0e0e0e6;
+        }
+
         /* Estilos para o Modal */
         .modal-overlay {
             position: fixed;
@@ -64,6 +108,7 @@
             align-items: center;
             z-index: 10000;
         }
+
         .modal-content {
             background: white;
             padding: 20px;
@@ -72,6 +117,7 @@
             max-width: 800px;
             position: relative;
         }
+
         .modal-close {
             position: absolute;
             top: 10px;
@@ -88,18 +134,22 @@
             justify-content: flex-start !important;
             text-align: left !important;
         }
+
         .benefits-wrap {
             align-items: flex-start !important;
             justify-content: flex-start !important;
             display: flex !important;
             flex-direction: column !important;
-            gap: 40px !important; /* Espaçamento vertical maior entre tópicos */
+            gap: 40px !important;
+            /* Espaçamento vertical maior entre tópicos */
             width: 100% !important;
             text-align: left !important;
         }
-        .benefits-wrap > .benefit-wrap:first-child {
+
+        .benefits-wrap>.benefit-wrap:first-child {
             margin-top: 80px !important;
         }
+
         .benefit-wrap {
             display: flex !important;
             flex-direction: row !important;
@@ -108,25 +158,30 @@
             margin-bottom: 0 !important;
             width: 100%;
         }
+
         .benefit-icon-wrap {
             margin-top: 0 !important;
             margin-right: 16px !important;
             flex-shrink: 0;
         }
+
         .benefit-text-wrap {
             text-align: left !important;
             width: 100% !important;
         }
+
         /* Remove alteração de flex-direction em mobile */
         @media (max-width: 991px) {
             .benefit-wrap {
                 flex-direction: row !important;
                 align-items: flex-start !important;
             }
+
             .benefits-image-wrap {
                 align-items: center !important;
             }
         }
+
         .beneficios-flex {
             display: flex !important;
             align-items: center !important;
@@ -134,6 +189,7 @@
             gap: 24px !important;
             width: 100%;
         }
+
         .benefits-image-wrap {
             display: flex !important;
             flex-direction: column !important;
@@ -143,6 +199,7 @@
             max-width: 700px !important;
             flex: 1 1 60%;
         }
+
         .benefits-image {
             margin: 0 auto !important;
             display: block !important;
@@ -150,9 +207,11 @@
             width: 100% !important;
             height: auto !important;
         }
+
         .beneficios-textos {
             flex: 1 1 40%;
         }
+
         .beneficios-flex {
             display: flex !important;
             align-items: center !important;
@@ -160,11 +219,13 @@
             gap: 24px !important;
             width: 100%;
         }
+
         @media (max-width: 991px) {
             .benefit-wrap {
                 flex-direction: column !important;
                 align-items: flex-start !important;
             }
+
             .benefits-image-wrap {
                 align-items: center !important;
             }
@@ -179,7 +240,8 @@
                 <div class="navigation">
                     <div id="w-node-_677ce8dc-20c3-795f-1d3a-dd0f52d52496-52d52492" class="navigation-left"><a href="/"
                             aria-current="page" class="logo-link w-inline-block w--current"><img
-                                src="../../assets/images/logo.png" loading="lazy" alt="Logo da C'Alma" class="header-logo" /></a>
+                                src="../../assets/images/logo.png" loading="lazy" alt="Logo da C'Alma"
+                                class="header-logo" /></a>
                     </div>
                     <div id="w-node-_677ce8dc-20c3-795f-1d3a-dd0f52d52499-52d52492" class="navigation-right">
                         <nav class="navigation-menu">
@@ -218,8 +280,7 @@
                             </div>
                         </div>
                         <div class="mobile-button-wrap">
-                            <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
-                                href="#"
+                            <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b" href="#"
                                 class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix open-modal-button">
                                 <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc">Agendar
                                     Demonstração</div><img alt="arrow"
@@ -326,7 +387,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-image-wrap"><img src="images/hero.jpeg" loading="lazy" alt="Mulher sorrindo em ambiente de trabalho saudável" class="hero-image" />
+                <div class="hero-image-wrap"><img src="images/hero.jpeg" loading="lazy"
+                        alt="Mulher sorrindo em ambiente de trabalho saudável" class="hero-image" />
                     <div class="white-shape-wrap"><img
                             src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790b7b041507d69d6a17fb7_corner-shape.svg"
                             loading="lazy" alt="forma de canto decorativa" class="corner-shape bottom" /><img
@@ -340,7 +402,8 @@
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d40ef36d54dc52b02edf_testimonial-3.png"
                                 loading="lazy" alt="Avatar de cliente satisfeito" class="customer-avatar overlap" /><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d66e2b6f157fb0eeece8_user-4.png"
-                                loading="lazy" alt="Avatar de cliente satisfeito" class="customer-avatar overlap" /></div>
+                                loading="lazy" alt="Avatar de cliente satisfeito" class="customer-avatar overlap" />
+                        </div>
                         <div class="users-signup-wrap">
                             <h1 class="heading h6 no-margin">200+ </h1>
                             <p class="paragraph small no-margin">Empresas Atendidas</p>
@@ -360,7 +423,8 @@
     </div>
     <div id="solucoes" class="section">
         <div class="container centered">
-            <h1 class="heading h2 centered">Escolha entre as soluções <span class="highlight">completas</span> que oferecemos para sua empresa</h1>
+            <h1 class="heading h2 centered">Escolha entre as soluções <span class="highlight">completas</span> que
+                oferecemos para sua empresa</h1>
             <div class="text-box m">
                 <div class="overlay-hidden">
                     <p class="paragraph large centered">Oferecemos diversas soluções para nossos assinantes.</p>
@@ -399,7 +463,8 @@
                             </div>
                             <div class="text-box s">
                                 <p class="paragraph large">Organize facilmente os dados da sua equipe em um só lugar.
-                                    Centralize informações importantes e facilite a gestão do bem-estar e saúde mental dentro da
+                                    Centralize informações importantes e facilite a gestão do bem-estar e saúde mental
+                                    dentro da
                                     empresa.</p>
                             </div>
                             <div class="spacer _16"></div>
@@ -413,13 +478,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="process-image-mobile-wrap"><img
-                                src="../../assets/images/team-health.jpeg"
+                        <div class="process-image-mobile-wrap"><img src="../../assets/images/team-health.jpeg"
                                 loading="lazy" alt="Equipe saudável e engajada" class="process-image-mobile" /></div>
                     </div>
-                    <div class="process-image-wrap"><img
-                            src="../../assets/images/team-health.jpeg"
-                            loading="lazy" alt="Equipe saudável e engajada" class="process-image" /></div>
+                    <div class="process-image-wrap"><img src="../../assets/images/team-health.jpeg" loading="lazy"
+                            alt="Equipe saudável e engajada" class="process-image" /></div>
                 </div>
                 <div data-w-id="17c4cf29-e88b-eaf3-7b1e-7557f7ee6188" class="process-card second">
                     <div class="w-layout-grid grid">
@@ -442,13 +505,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="process-image-mobile-wrap"><img
-                                src="../../assets/images/make-company.jpeg"
+                        <div class="process-image-mobile-wrap"><img src="../../assets/images/make-company.jpeg"
                                 loading="lazy" alt="Ambiente de trabalho positivo" class="process-image-mobile" /></div>
                     </div>
-                    <div class="process-image-wrap"><img
-                            src="../../assets/images/make-company.jpeg"
-                            loading="lazy" alt="Ambiente de trabalho positivo" class="process-image" /></div>
+                    <div class="process-image-wrap"><img src="../../assets/images/make-company.jpeg" loading="lazy"
+                            alt="Ambiente de trabalho positivo" class="process-image" /></div>
                 </div>
                 <div class="process-card third">
                     <div class="w-layout-grid grid">
@@ -472,13 +533,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="process-image-mobile-wrap"><img
-                                src="../../assets/images/health.jpeg"
-                                loading="lazy" alt="Colaborador focado e saudável" class="process-image-mobile" /></div>
+                        <div class="process-image-mobile-wrap"><img src="../../assets/images/health.jpeg" loading="lazy"
+                                alt="Colaborador focado e saudável" class="process-image-mobile" /></div>
                     </div>
-                    <div class="process-image-wrap"><img
-                            src="../../assets/images/health.jpeg"
-                            loading="lazy" alt="Colaborador focado e saudável" class="process-image" /></div>
+                    <div class="process-image-wrap"><img src="../../assets/images/health.jpeg" loading="lazy"
+                            alt="Colaborador focado e saudável" class="process-image" /></div>
                 </div>
             </div>
         </div>
@@ -486,7 +545,8 @@
     <div class="spacer _32"></div>
     <div id="beneficios" class="section">
         <div class="container">
-            <div class="beneficios-flex" style="display: flex; align-items: center; justify-content: space-between; gap: 48px;">
+            <div class="beneficios-flex"
+                style="display: flex; align-items: center; justify-content: space-between; gap: 48px;">
                 <div class="beneficios-textos">
                     <h1 data-w-id="9dfa85f9-3c81-4705-1c09-b13207fda3e8"
                         style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -495,7 +555,8 @@
                         <div class="overlay-hidden">
                             <p data-w-id="a9e0ba6f-1b29-019b-d6d5-b205ca7913fd"
                                 style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="paragraph large">Veja abaixo os benefícios de utilizar nossa plataforma e ter o suporte de especialistas qualificados.</p>
+                                class="paragraph large">Veja abaixo os benefícios de utilizar nossa plataforma e ter o
+                                suporte de especialistas qualificados.</p>
                         </div>
                     </div>
                     <div class="benefits-wrap">
@@ -515,7 +576,9 @@
                                 <div class="text-box s">
                                     <p data-w-id="abb820d6-1872-9f0b-450b-0be73e6a1dd8"
                                         style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                        class="paragraph">Conte com psicólogos e especialistas que podem orientar sua equipe, criar planos de bem-estar personalizados e ajudar a manter a motivação.</p>
+                                        class="paragraph">Conte com psicólogos e especialistas que podem orientar sua
+                                        equipe, criar planos de bem-estar personalizados e ajudar a manter a motivação.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -534,7 +597,9 @@
                                 <div class="text-box s">
                                     <p data-w-id="294b6cb8-8f8a-9c14-4494-86d556490112"
                                         style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                        class="paragraph">Nossa plataforma digital oferece acesso contínuo a ferramentas de bem-estar, sessões de terapia e conteúdos exclusivos, a qualquer hora e em qualquer lugar.</p>
+                                        class="paragraph">Nossa plataforma digital oferece acesso contínuo a ferramentas
+                                        de bem-estar, sessões de terapia e conteúdos exclusivos, a qualquer hora e em
+                                        qualquer lugar.</p>
                                 </div>
                             </div>
                         </div>
@@ -554,15 +619,14 @@
                                 <div class="text-box s">
                                     <p data-w-id="f65e6b52-9707-0c59-69a3-1cdbe367abdf"
                                         style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                                        class="paragraph">Oferecemos uma vasta gama de recursos, incluindo IA conversacional, analytics avançados, e muito mais.</p>
+                                        class="paragraph">Oferecemos uma vasta gama de recursos, incluindo IA
+                                        conversacional, analytics avançados, e muito mais.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="benefits-image-wrap"><img
-                        src="../../assets/images/calma-why.png"
-                        loading="lazy"
+                <div class="benefits-image-wrap"><img src="../../assets/images/calma-why.png" loading="lazy"
                         alt="Mulher meditando em um ambiente de trabalho calmo" class="benefits-image" />
                     <div class="slogans-wrap top-right">
                         <div class="pink-slogan-wrap">
@@ -580,12 +644,14 @@
         <div class="container centered">
             <h1 data-w-id="f76ac3d1-2fb6-00ec-701c-4fad7deb6f31"
                 style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                class="heading h2">Jornadas de <span class="highlight">bem-estar</span> que valem a pena compartilhar</h1>
+                class="heading h2">Jornadas de <span class="highlight">bem-estar</span> que valem a pena compartilhar
+            </h1>
             <div class="text-box m">
                 <div class="overlay-hidden">
                     <p data-w-id="5267ff4e-1b22-7d58-bc06-afb358edf754"
                         style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                        class="paragraph large centered">As histórias de sucesso de nossos membros são um testemunho do poder transformador da dedicação e perseverança.</p>
+                        class="paragraph large centered">As histórias de sucesso de nossos membros são um testemunho do
+                        poder transformador da dedicação e perseverança.</p>
                 </div>
             </div>
             <div class="spacer _32"></div>
@@ -593,7 +659,9 @@
                 <div class="testimonial-gradient-left"></div>
                 <div class="testimonials-layout-wrap">
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Desde que implementamos a C'Alma, vimos uma redução de 20% no absenteísmo. Ter dados sobre o bem-estar da equipe mudou nosso jogo e nos ajudou a cumprir a legislação sem esforço."</p>
+                        <p class="paragraph large">"Desde que implementamos a C'Alma, vimos uma redução de 20% no
+                            absenteísmo. Ter dados sobre o bem-estar da equipe mudou nosso jogo e nos ajudou a cumprir a
+                            legislação sem esforço."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798f9c77207a68f534ef2ea_testimonial-5.png"
                                 loading="lazy" alt="Avatar de Ricardo Salles" class="testimonial-avatar" />
@@ -604,7 +672,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Manter a conformidade com as normas de saúde mental era um desafio. A C'Alma não só automatizou o processo, como melhorou drasticamente o clima organizacional."</p>
+                        <p class="paragraph large">"Manter a conformidade com as normas de saúde mental era um desafio.
+                            A C'Alma não só automatizou o processo, como melhorou drasticamente o clima organizacional."
+                        </p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d66e2b6f157fb0eeece8_user-4.png"
                                 loading="lazy" alt="Avatar de Eduardo Alcântara" class="testimonial-avatar" />
@@ -615,7 +685,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Eu estava preocupada com o burnout na minha equipe. A plataforma nos deu ferramentas para gerenciar o estresse, e a produtividade aumentou visivelmente em poucas semanas."</p>
+                        <p class="paragraph large">"Eu estava preocupada com o burnout na minha equipe. A plataforma nos
+                            deu ferramentas para gerenciar o estresse, e a produtividade aumentou visivelmente em poucas
+                            semanas."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d40ef36d54dc52b02edf_testimonial-3.png"
                                 loading="lazy" alt="Avatar de Isabella Bittencourt" class="testimonial-avatar" />
@@ -626,7 +698,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Como uma startup, a cultura é tudo. A C'Alma se tornou um pilar do nosso pacote de benefícios e os colaboradores se sentem genuinamente cuidados e valorizados."</p>
+                        <p class="paragraph large">"Como uma startup, a cultura é tudo. A C'Alma se tornou um pilar do
+                            nosso pacote de benefícios e os colaboradores se sentem genuinamente cuidados e
+                            valorizados."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d40cf238487080a7048c_testimonial-2.png"
                                 loading="lazy" alt="Avatar de Fernando Aguiar" class="testimonial-avatar" />
@@ -637,7 +711,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Eu não me sentia à vontade para falar sobre estresse no trabalho, mas as ferramentas da C'Alma me deram o suporte que eu precisava de forma totalmente confidencial. Fez toda a diferença para mim."</p>
+                        <p class="paragraph large">"Eu não me sentia à vontade para falar sobre estresse no trabalho,
+                            mas as ferramentas da C'Alma me deram o suporte que eu precisava de forma totalmente
+                            confidencial. Fez toda a diferença para mim."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d4086b13913d42afbe71_testimonial-1.png"
                                 loading="lazy" alt="Avatar de Arthur Vasconcellos" class="testimonial-avatar" />
@@ -650,7 +726,9 @@
                 </div>
                 <div class="testimonials-layout-wrap">
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Desde que implementamos a C'Alma, vimos uma redução de 20% no absenteísmo. Ter dados sobre o bem-estar da equipe mudou nosso jogo e nos ajudou a cumprir a legislação sem esforço."</p>
+                        <p class="paragraph large">"Desde que implementamos a C'Alma, vimos uma redução de 20% no
+                            absenteísmo. Ter dados sobre o bem-estar da equipe mudou nosso jogo e nos ajudou a cumprir a
+                            legislação sem esforço."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6798f9c77207a68f534ef2ea_testimonial-5.png"
                                 loading="lazy" alt="Avatar de Ricardo Salles" class="testimonial-avatar" />
@@ -661,7 +739,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Manter a conformidade com as normas de saúde mental era um desafio. A C'Alma não só automatizou o processo, como melhorou drasticamente o clima organizacional."</p>
+                        <p class="paragraph large">"Manter a conformidade com as normas de saúde mental era um desafio.
+                            A C'Alma não só automatizou o processo, como melhorou drasticamente o clima organizacional."
+                        </p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d66e2b6f157fb0eeece8_user-4.png"
                                 loading="lazy" alt="Avatar de Eduardo Alcântara" class="testimonial-avatar" />
@@ -672,7 +752,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Eu estava preocupada com o burnout na minha equipe. A plataforma nos deu ferramentas para gerenciar o estresse, e a produtividade aumentou visivelmente em poucas semanas."</p>
+                        <p class="paragraph large">"Eu estava preocupada com o burnout na minha equipe. A plataforma nos
+                            deu ferramentas para gerenciar o estresse, e a produtividade aumentou visivelmente em poucas
+                            semanas."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d40ef36d54dc52b02edf_testimonial-3.png"
                                 loading="lazy" alt="Avatar de Isabella Bittencourt" class="testimonial-avatar" />
@@ -683,7 +765,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Como uma startup, a cultura é tudo. A C'Alma se tornou um pilar do nosso pacote de benefícios e os colaboradores se sentem genuinamente cuidados e valorizados."</p>
+                        <p class="paragraph large">"Como uma startup, a cultura é tudo. A C'Alma se tornou um pilar do
+                            nosso pacote de benefícios e os colaboradores se sentem genuinamente cuidados e
+                            valorizados."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d40cf238487080a7048c_testimonial-2.png"
                                 loading="lazy" alt="Avatar de Fernando Aguiar" class="testimonial-avatar" />
@@ -694,7 +778,9 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="paragraph large">"Eu não me sentia à vontade para falar sobre estresse no trabalho, mas as ferramentas da C'Alma me deram o suporte que eu precisava de forma totalmente confidencial. Fez toda a diferença para mim."</p>
+                        <p class="paragraph large">"Eu não me sentia à vontade para falar sobre estresse no trabalho,
+                            mas as ferramentas da C'Alma me deram o suporte que eu precisava de forma totalmente
+                            confidencial. Fez toda a diferença para mim."</p>
                         <div class="testimonial-details-wrap"><img
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6790d4086b13913d42afbe71_testimonial-1.png"
                                 loading="lazy" alt="Avatar de Arthur Vasconcellos" class="testimonial-avatar" />
@@ -712,7 +798,8 @@
     <div id="contato" class="section">
         <div class="container">
             <div class="w-layout-grid grid left-align">
-                <div id="w-node-_0e1deb33-de35-ce73-ff72-408053030df0-db297cc7" class="faq-heading-wrap" style="flex: 1; margin-right: 20px;">
+                <div id="w-node-_0e1deb33-de35-ce73-ff72-408053030df0-db297cc7" class="faq-heading-wrap"
+                    style="flex: 1; margin-right: 20px;">
                     <div class="spacer _64"></div>
                     <div class="overlay-hidden bottom-padding">
                         <h2 data-w-id="0e1deb33-de35-ce73-ff72-408053030df8"
@@ -724,7 +811,8 @@
                         <div class="overlay-hidden">
                             <p data-w-id="0e1deb33-de35-ce73-ff72-408053030dfb"
                                 style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                class="paragraph large">Encontre respostas para as perguntas mais comuns e prepare-se para sua jornada de bem-estar!</p>
+                                class="paragraph large">Encontre respostas para as perguntas mais comuns e prepare-se
+                                para sua jornada de bem-estar!</p>
                         </div>
                         <div class="spacer _16"></div>
                     </div>
@@ -743,7 +831,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="w-node-_0e1deb33-de35-ce73-ff72-408053030e04-db297cc7" class="faq-items-wrapper" style="flex: 1;">
+                <div id="w-node-_0e1deb33-de35-ce73-ff72-408053030e04-db297cc7" class="faq-items-wrapper"
+                    style="flex: 1;">
                     <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e05" style="opacity:0" class="faq-item">
                         <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e06" class="faq-item-question top-border">
                             <h1 class="heading h6 no-margin">Qual o horário de funcionamento?</h1><img loading="lazy"
@@ -751,7 +840,9 @@
                                 alt="Ícone para expandir pergunta do FAQ" class="faq-expand-icon" />
                         </div>
                         <div style="height:0px" class="faq-item-answer">
-                            <p class="paragraph large padding">Nossa plataforma digital está disponível 24 horas por dia, 7 dias por semana. O suporte ao cliente funciona de segunda a sexta, das 8h às 18h.</p>
+                            <p class="paragraph large padding">Nossa plataforma digital está disponível 24 horas por
+                                dia, 7 dias por semana. O suporte ao cliente funciona de segunda a sexta, das 8h às 18h.
+                            </p>
                         </div>
                     </div>
                     <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e0e" style="opacity:0" class="faq-item">
@@ -761,18 +852,20 @@
                                 alt="Ícone para expandir pergunta do FAQ" class="faq-expand-icon" />
                         </div>
                         <div style="height:0px" class="faq-item-answer">
-                            <p class="paragraph large padding">Sim! Nossos especialistas certificados oferecem planos de bem-estar personalizados para ajudar sua equipe a atingir seus objetivos. Entre em contato para agendar uma sessão.</p>
+                            <p class="paragraph large padding">Sim! Nossos especialistas certificados oferecem planos de
+                                bem-estar personalizados para ajudar sua equipe a atingir seus objetivos. Entre em
+                                contato para agendar uma sessão.</p>
                         </div>
                     </div>
                     <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e17" style="opacity:0" class="faq-item">
                         <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e18" class="faq-item-question">
-                            <h1 class="heading h6 no-margin">Quais são as opções de planos?</h1><img
-                                loading="lazy"
+                            <h1 class="heading h6 no-margin">Quais são as opções de planos?</h1><img loading="lazy"
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/6799e5c08ad36b4b50d883a6_plus-light.svg"
                                 alt="Ícone para expandir pergunta do FAQ" class="faq-expand-icon" />
                         </div>
                         <div style="height:0px" class="faq-item-answer">
-                            <p class="paragraph large padding">Temos planos flexíveis, incluindo opções mensais e anuais. Visite nossa página de preços para mais detalhes.</p>
+                            <p class="paragraph large padding">Temos planos flexíveis, incluindo opções mensais e
+                                anuais. Visite nossa página de preços para mais detalhes.</p>
                         </div>
                     </div>
                     <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e20" style="opacity:0" class="faq-item">
@@ -783,7 +876,8 @@
                                 alt="Ícone para expandir pergunta do FAQ" class="faq-expand-icon" />
                         </div>
                         <div style="height:0px" class="faq-item-answer">
-                            <p class="paragraph large padding">Sim! Todos os planos padrão incluem acesso às nossas sessões de bem-estar em grupo, como ioga, meditação e workshops.</p>
+                            <p class="paragraph large padding">Sim! Todos os planos padrão incluem acesso às nossas
+                                sessões de bem-estar em grupo, como ioga, meditação e workshops.</p>
                         </div>
                     </div>
                     <div data-w-id="0e1deb33-de35-ce73-ff72-408053030e29" style="opacity:0" class="faq-item">
@@ -794,7 +888,8 @@
                                 alt="Ícone para expandir pergunta do FAQ" class="faq-expand-icon" />
                         </div>
                         <div style="height:0px" class="faq-item-answer">
-                            <p class="paragraph large padding">Garantimos a confidencialidade e a segurança dos dados dos seus colaboradores, seguindo todas as normas de proteção de dados.</p>
+                            <p class="paragraph large padding">Garantimos a confidencialidade e a segurança dos dados
+                                dos seus colaboradores, seguindo todas as normas de proteção de dados.</p>
                         </div>
                     </div>
                 </div>
@@ -811,7 +906,8 @@
                 <div class="overlay-hidden">
                     <p data-w-id="8d10d290-0e6b-d449-5389-581c0d709322"
                         style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                        class="paragraph large centered">Leia as últimas novidades do setor de bem-estar corporativo.</p>
+                        class="paragraph large centered">Leia as últimas novidades do setor de bem-estar corporativo.
+                    </p>
                 </div>
             </div>
             <div class="spacer _32"></div>
@@ -819,12 +915,9 @@
                 <div class="blog-collection-list w-dyn-list">
                     <div role="list" class="grid w-dyn-items">
                         <div role="listitem" class="w-dyn-item">
-                            <a href="/post/how-to-stay-motivated-on-your-fitness-journey"
-                                class="blog-post-link w-inline-block">
-                                <div class="blog-post-card"><img
-                                        src="../../assets/images/article-one.png"
-                                        loading="lazy" alt="Post do blog sobre motivação"
-                                        class="blog-post-thumbnail" />
+                            <div class="blog-post-link w-inline-block blog-card-disabled">
+                                <div class="blog-post-card"><img src="../../assets/images/article-one.png"
+                                        loading="lazy" alt="Post do blog sobre motivação" class="blog-post-thumbnail" />
                                     <h1 class="heading h5">Como Manter a Motivação na sua Jornada de Bem-Estar</h1>
                                     <div class="spacer _16"></div>
                                     <div class="post-category-date-wrap">
@@ -834,16 +927,22 @@
                                         <p class="publised-date paragraph no-margin">5 Fev</p>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="blog-card-overlay">
+                                    <div>
+                                        <h3 class="overlay-title">Em Breve</h3>
+                                        <p class="overlay-subtitle">Estamos trabalhando para melhorar a saúde mental na
+                                            sua empresa.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div role="listitem" class="w-dyn-item">
-                            <a href="/post/the-importance-of-rest-and-recovery-in-fitness"
-                                class="blog-post-link w-inline-block">
-                                <div class="blog-post-card"><img
-                                        src="../../assets/images/article-two.png"
+                            <div class="blog-post-link w-inline-block blog-card-disabled">
+                                <div class="blog-post-card"><img src="../../assets/images/article-two.png"
                                         loading="lazy" alt="Post do blog sobre descanso e recuperação"
                                         class="blog-post-thumbnail" />
-                                    <h1 class="heading h5">A Importância do Descanso e da Recuperação para o Bem-Estar</h1>
+                                    <h1 class="heading h5">A Importância do Descanso e da Recuperação para o Bem-Estar
+                                    </h1>
                                     <div class="spacer _16"></div>
                                     <div class="post-category-date-wrap">
                                         <div class="category-label-wrap">
@@ -852,23 +951,36 @@
                                         <p class="publised-date paragraph no-margin">5 Fev</p>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="blog-card-overlay">
+                                    <div>
+                                        <h3 class="overlay-title">Em Breve</h3>
+                                        <p class="overlay-subtitle">Estamos trabalhando para melhorar a saúde mental na
+                                            sua empresa.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="w-node-_34601f00-ac3d-dc06-4969-f387c4290eb9-db297cc7" class="latest-posts-details-wrap">
                     <p data-w-id="101a9752-fb30-7149-84e0-5d0e429822d8"
                         style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                        class="paragraph large">Descubra as últimas notícias, dicas de especialistas e entrevistas inspiradoras do setor de bem-estar.</p>
+                        class="paragraph large">Descubra as últimas notícias, dicas de especialistas e entrevistas
+                        inspiradoras do setor de bem-estar.</p>
                     <div class="overlay-hidden">
                         <div data-w-id="c42826f8-c72c-9213-09bd-530d2f94d273"
                             style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
                             class="button-wrap">
                             <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
                                 href="/blog"
-                                class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix">
-                                <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc">Leia mais posts
-                                </div><img alt="arrow"
+                                class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix leia-mais-posts-button">
+                                <div
+                                    class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc button-text-original">
+                                    Leia mais posts
+                                </div>
+                                <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc button-text-hover"
+                                    style="display:none;">Em Breve</div>
+                                <img alt="arrow"
                                     src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
                                     class="scroll-arrow-img w-variant-1aa9753b-0a58-a591-b066-af77827f05bc" />
                             </a>
@@ -886,12 +998,14 @@
                 <div data-w-id="f68f128f-ec7c-8883-207c-e38e2a335e0a" class="signup-wrap">
                     <div class="w-layout-grid grid signup">
                         <div class="signup-details-wrap">
-                            <h1 class="heading h1">Comece <span class="highlight light">hoje</span> e alcance o bem-estar na sua empresa</h1>
+                            <h1 class="heading h1">Comece <span class="highlight light">hoje</span> e alcance o
+                                bem-estar na sua empresa</h1>
                             <div class="button-wrap">
                                 <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
                                     href="/contact"
                                     class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix">
-                                    <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc">Entre em Contato
+                                    <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc">Entre em
+                                        Contato
                                     </div><img alt="arrow"
                                         src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
                                         class="scroll-arrow-img w-variant-1aa9753b-0a58-a591-b066-af77827f05bc" />
@@ -911,8 +1025,7 @@
         <div class="container footer">
             <div class="w-layout-grid footer-links-grid">
                 <div class="text-wrapper"><a href="/" aria-current="page"
-                        class="footer-logo-link w-inline-block w--current"><img
-                            src="../../assets/images/logo.png"
+                        class="footer-logo-link w-inline-block w--current"><img src="../../assets/images/logo.png"
                             loading="lazy" alt="logo" class="footer-logo" style="width: 160px;" /></a>
                     <div class="spacer _16"></div>
                 </div>
@@ -956,7 +1069,8 @@
                 </div>
                 <div class="footer-links-col">
                     <h4 class="footer-col-heading">Social</h4>
-                    <a href="https://www.instagram.com/c.almaai/" target="_blank" class="navigation-link w-inline-block">
+                    <a href="https://www.instagram.com/c.almaai/" target="_blank"
+                        class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Instagram</div>
                         <div class="link-text cc-1 cc-hidden">Instagram</div>
                     </a>
@@ -994,7 +1108,9 @@
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <!-- Google Calendar Appointment Scheduling begin -->
-            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3PNZbF0_4sZVVpcYQka0iJSDQN65c6inZFznIOjR2jEox7onZIPGhyJeIQ_TbkaIiVBjrHwHFi?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3PNZbF0_4sZVVpcYQka0iJSDQN65c6inZFznIOjR2jEox7onZIPGhyJeIQ_TbkaIiVBjrHwHFi?gv=true"
+                style="border: 0" width="100%" height="600" frameborder="0"></iframe>
             <!-- end Google Calendar Appointment Scheduling -->
         </div>
     </div>
