@@ -51,6 +51,36 @@
         .w-webflow-badge {
             display: none !important;
         }
+        /* Estilos para o Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
     </style>
 </head>
 
@@ -65,19 +95,27 @@
                     </div>
                     <div id="w-node-_677ce8dc-20c3-795f-1d3a-dd0f52d52499-52d52492" class="navigation-right">
                         <nav class="navigation-menu">
-                            <a href="/classes" class="navigation-link no-margin w-inline-block">
+                            <a href="#inicio" class="navigation-link no-margin w-inline-block">
+                                <div class="link-text cc-1">Início</div>
+                                <div class="link-text cc-1 cc-hidden">Início</div>
+                            </a>
+                            <a href="#solucoes" class="navigation-link no-margin w-inline-block">
                                 <div class="link-text cc-1">Soluções</div>
                                 <div class="link-text cc-1 cc-hidden">Soluções</div>
                             </a>
-                            <a href="/locations" class="navigation-link no-margin w-inline-block">
+                            <a href="#depoimentos" class="navigation-link no-margin w-inline-block">
                                 <div class="link-text cc-1">Clientes</div>
                                 <div class="link-text cc-1 cc-hidden">Clientes</div>
                             </a>
-                            <a href="/about" class="navigation-link no-margin w-inline-block">
-                                <div class="link-text cc-1">Recursos</div>
-                                <div class="link-text cc-1 cc-hidden">Recursos</div>
+                            <a href="#beneficios" class="navigation-link no-margin w-inline-block">
+                                <div class="link-text cc-1">Benefícios</div>
+                                <div class="link-text cc-1 cc-hidden">Benefícios</div>
                             </a>
-                            <a href="/pricing" class="navigation-link no-margin w-inline-block">
+                            <a href="#blog" class="navigation-link no-margin w-inline-block">
+                                <div class="link-text cc-1">Blog</div>
+                                <div class="link-text cc-1 cc-hidden">Blog</div>
+                            </a>
+                            <a href="#contato" class="navigation-link no-margin w-inline-block">
                                 <div class="link-text cc-1">Contato</div>
                                 <div class="link-text cc-1 cc-hidden">Contato</div>
                             </a>
@@ -93,8 +131,8 @@
                         </div>
                         <div class="mobile-button-wrap">
                             <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
-                                href="/contact"
-                                class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix">
+                                href="#"
+                                class="button w-variant-1aa9753b-0a58-a591-b066-af77827f05bc w-inline-block w-clearfix open-modal-button">
                                 <div class="button-text w-variant-1aa9753b-0a58-a591-b066-af77827f05bc">Agendar
                                     Demonstração</div><img alt="arrow"
                                     src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
@@ -107,35 +145,35 @@
             <div class="mobile-menu">
                 <div class="mobile-menu-wrapper">
                     <div class="mobile-menu-navigation">
-                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524bd" href="/classes"
+                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524bd" href="#solucoes"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Soluções</div>
                         </a>
-                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c0" href="/locations"
+                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c0" href="#depoimentos"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Clientes</div>
                         </a>
-                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c3" href="/about"
+                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c3" href="#blog"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Recursos</div>
                         </a>
-                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c6" href="/pricing"
+                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c6" href="#contato"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Contato</div>
                         </a>
-                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c9" href="/blog"
+                        <a data-w-id="677ce8dc-20c3-795f-1d3a-dd0f52d524c9" href="#blog"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Blog</div>
                         </a>
-                        <a data-w-id="818e6f7c-256d-4115-73ea-c837ecdaec39" href="/contact"
+                        <a data-w-id="818e6f7c-256d-4115-73ea-c837ecdaec39" href="#contato"
                             class="mobile-menu-link w-inline-block">
                             <div class="text-block link-text">Contato</div>
                         </a>
                     </div>
                     <div class="mobile-menu-button-wrap">
-                        <a data-wf--button--variant="light" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b" href="/"
+                        <a data-wf--button--variant="light" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b" href="#"
                             aria-current="page"
-                            class="button w-variant-46914de4-7ebb-11f8-034a-469667bfd2c0 w-inline-block w-clearfix w--current">
+                            class="button w-variant-46914de4-7ebb-11f8-034a-469667bfd2c0 w-inline-block w-clearfix w--current open-modal-button">
                             <div class="button-text">Agendar Demonstração</div><img alt="arrow"
                                 src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
                                 class="scroll-arrow-img w-variant-46914de4-7ebb-11f8-034a-469667bfd2c0" />
@@ -145,7 +183,7 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div id="inicio" class="section">
         <div class="container">
             <div class="w-layout-grid grid tab-1">
                 <div id="w-node-_82cf5685-899b-68b3-6b88-39e481098ec5-db297cc7" class="hero-details-wrap">
@@ -170,14 +208,14 @@
                                 style="-webkit-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 130%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
                                 class="button-wrap">
                                 <a data-wf--button--variant="primary" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
-                                    href="/contact"
-                                    class="button w-variant-a6263851-898d-9b7e-f947-5f7b70b7aae9 w-inline-block w-clearfix">
+                                    href="#"
+                                    class="button w-variant-a6263851-898d-9b7e-f947-5f7b70b7aae9 w-inline-block w-clearfix open-modal-button">
                                     <div class="button-text">AGENDAR DEMONSTRAÇÃO</div><img alt="arrow"
                                         src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
                                         class="scroll-arrow-img" />
                                 </a>
                                 <a data-wf--button--variant="outline" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
-                                    href="/admin/licensing"
+                                    href="#"
                                     class="button w-variant-c5d756a3-0790-7262-5812-bcb231ac6150 w-inline-block w-clearfix">
                                     <div class="button-text">CONHECER SOLUÇÕES</div><img alt="arrow"
                                         src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/678fa6c758ddf42d94673060_arrow-right-top.svg"
@@ -232,7 +270,7 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div id="solucoes" class="section">
         <div class="container centered">
             <h1 class="heading h2 centered">Escolha entre as soluções <span class="highlight">completas</span> que oferecemos para sua empresa</h1>
             <div class="text-box m">
@@ -249,7 +287,7 @@
             </div>
         </div>
     </div>
-    <div class="section process">
+    <div id="processo" class="section process">
         <div class="container centered">
             <div class="process-headline-wrap">
                 <h2 data-w-id="bac1e858-05e5-5490-90c7-6dd209237701"
@@ -358,7 +396,7 @@
         </div>
     </div>
     <div class="spacer _32"></div>
-    <div class="section">
+    <div id="beneficios" class="section">
         <div class="container">
             <h1 data-w-id="9dfa85f9-3c81-4705-1c09-b13207fda3e8"
                 style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -448,7 +486,7 @@
             </div>
         </div>
     </div>
-    <div class="section gray">
+    <div id="depoimentos" class="section gray">
         <div class="container centered">
             <h1 data-w-id="f76ac3d1-2fb6-00ec-701c-4fad7deb6f31"
                 style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -581,7 +619,7 @@
             </div>
         </div>
     </div>
-    <div class="section">
+    <div id="contato" class="section">
         <div class="container">
             <div class="w-layout-grid grid left-align">
                 <div id="w-node-_0e1deb33-de35-ce73-ff72-408053030df0-db297cc7" class="faq-heading-wrap" style="flex: 1; margin-right: 20px;">
@@ -674,7 +712,7 @@
         </div>
     </div>
     </div>
-    <div class="section">
+    <div id="blog" class="section">
         <div class="container centered">
             <h1 data-w-id="9e69ab73-0b4f-1351-d8b4-9b6c59b4bd72"
                 style="-webkit-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -758,8 +796,7 @@
                 <div data-w-id="f68f128f-ec7c-8883-207c-e38e2a335e0a" class="signup-wrap">
                     <div class="w-layout-grid grid signup">
                         <div class="signup-details-wrap">
-                            <h1 class="heading h1">Comece <span class="highlight light">hoje</span> e alcance seus
-                                objetivos de bem-estar</h1>
+                            <h1 class="heading h1">Comece <span class="highlight light">hoje</span> e alcance o bem-estar na sua empresa</h1>
                             <div class="button-wrap">
                                 <a data-wf--button--variant="dark" data-w-id="032858e1-8bd2-99fc-74a4-5d8546dbbd5b"
                                     href="/contact"
@@ -791,31 +828,27 @@
                 </div>
                 <div class="footer-links-col">
                     <h4 class="footer-col-heading">Páginas</h4>
-                    <a href="/" aria-current="page" class="navigation-link w-inline-block w--current">
+                    <a href="#inicio" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Início</div>
                         <div class="link-text cc-1 cc-hidden">Início</div>
                     </a>
-                    <a href="/classes" class="navigation-link w-inline-block">
+                    <a href="#solucoes" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Soluções</div>
                         <div class="link-text cc-1 cc-hidden">Soluções</div>
                     </a>
-                    <a href="/locations" class="navigation-link w-inline-block">
+                    <a href="#depoimentos" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Clientes</div>
                         <div class="link-text cc-1 cc-hidden">Clientes</div>
                     </a>
-                    <a href="/about" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">Sobre</div>
-                        <div class="link-text cc-1 cc-hidden">Sobre</div>
+                    <a href="#beneficios" class="navigation-link w-inline-block">
+                        <div class="link-text cc-1">Benefícios</div>
+                        <div class="link-text cc-1 cc-hidden">Benefícios</div>
                     </a>
-                    <a href="/pricing" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">Preços</div>
-                        <div class="link-text cc-1 cc-hidden">Preços</div>
-                    </a>
-                    <a href="/blog" class="navigation-link w-inline-block">
+                    <a href="#blog" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Blog</div>
                         <div class="link-text cc-1 cc-hidden">Blog</div>
                     </a>
-                    <a href="/contact" class="navigation-link w-inline-block">
+                    <a href="#contato" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Contato</div>
                         <div class="link-text cc-1 cc-hidden">Contato</div>
                     </a>
@@ -833,25 +866,9 @@
                 </div>
                 <div class="footer-links-col">
                     <h4 class="footer-col-heading">Social</h4>
-                    <a href="https://www.instagram.com/" class="navigation-link w-inline-block">
+                    <a href="https://www.instagram.com/c.almaai/" target="_blank" class="navigation-link w-inline-block">
                         <div class="link-text cc-1">Instagram</div>
                         <div class="link-text cc-1 cc-hidden">Instagram</div>
-                    </a>
-                    <a href="https://www.facebook.com/" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">Facebook</div>
-                        <div class="link-text cc-1 cc-hidden">Facebook</div>
-                    </a>
-                    <a href="https://www.youtube.com/" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">Youtube</div>
-                        <div class="link-text cc-1 cc-hidden">Youtube</div>
-                    </a>
-                    <a href="https://www.linkedin.com/" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">Linkedin</div>
-                        <div class="link-text cc-1 cc-hidden">Linkedin</div>
-                    </a>
-                    <a href="https://x.com/tomsdesign_" class="navigation-link w-inline-block">
-                        <div class="link-text cc-1">X</div>
-                        <div class="link-text cc-1 cc-hidden">X</div>
                     </a>
                 </div>
             </div>
@@ -870,7 +887,52 @@
         type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/678e63b9b4f4a2e9db297cc6/js/webflow.2a39d197.62e1acfe3a1bc657.js"
         type="text/javascript"></script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Modal HTML -->
+    <div id="calendarModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3PNZbF0_4sZVVpcYQka0iJSDQN65c6inZFznIOjR2jEox7onZIPGhyJeIQ_TbkaIiVBjrHwHFi?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('calendarModal');
+            const closeModal = document.querySelector('.modal-close');
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    modal.style.display = 'flex';
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
-

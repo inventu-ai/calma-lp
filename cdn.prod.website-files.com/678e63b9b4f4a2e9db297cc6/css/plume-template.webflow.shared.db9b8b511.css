@@ -2881,7 +2881,7 @@ blockquote {
 .grid.benefits {
     grid-column-gap: 32px;
     grid-row-gap: 32px;
-    place-items: center start;
+    align-items: center;
 }
 
 .grid.left-align {
