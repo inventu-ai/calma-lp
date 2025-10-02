@@ -2842,8 +2842,6 @@ blockquote {
 }
 
 .button:hover:where(.w-variant-1aa9753b-0a58-a591-b066-af77827f05bc) {
-    filter: invert();
-    color: var(--colors--white);
     background-color: #fff0;
 }
 
@@ -3551,11 +3549,11 @@ blockquote {
 }
 
 .pink-slogan-wrap {
-    background-color: var(--colors--pink);
     border-radius: 1000px;
     padding: 8px 16px;
     position: static;
     inset: auto auto 32px 32px;
+    background: #0082f3;
 }
 
 .slogans-wrap {
@@ -3565,7 +3563,7 @@ blockquote {
     align-items: flex-start;
     display: flex;
     position: absolute;
-    bottom: 32px;
+    bottom: 64px;
     left: 32px;
 }
 
@@ -3574,9 +3572,9 @@ blockquote {
 }
 
 .white-slogan-wrap {
-    background-color: var(--colors--white);
     border-radius: 1000px;
-    padding: 8px 16px;
+    padding: 8px 30px;
+    background: #fff;
 }
 
 .small-benefit-wrap {
@@ -5526,4 +5524,66 @@ blockquote {
             align-items: flex-start !important;
         }
     }
+}
+
+.demo-btn {
+    background: #859CF9;
+    color: #fff;
+    border: 1px solid #859CF9;
+    transition: all;
+}
+
+.demo-btn:hover {
+    background: transparent;
+    border: 1px solid #859CF9;
+    color: #859CF9;
+}
+
+.demo-btn-outlined {
+    background: transparent;
+    border: 1px solid #859CF9;
+    color: #859CF9;
+    transition: all .6s;
+}
+
+.demo-btn-outlined:hover {
+    background: #859CF9;
+    color: #fff;
+}
+
+.white {
+    color: #fff !important;
+}
+
+.blue {
+    color: #859CF9 !important;
+}
+
+
+.blue-dark {
+    color: #191f9f !important;
+}
+
+.arrow-size {
+    font-size: 12px;
+    transition: .3s;
+}
+
+.demo-btn:hover .arrow-size {
+    transform: translateX(2px);
+}
+
+.btn-botn {
+    background: #fff;
+    color: #859CF9;
+    border: 1px solid #859CF9;
+}
+
+.btn-botn:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.to-blue {
+    filter: grayscale(100%) brightness(200%);
 }
